@@ -1,0 +1,44 @@
+package aprilselproject;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.github.dockerjava.api.model.Driver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Pagesource {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver=new ChromeDriver();
+		driver.get("https://www.google.com");// chrome thurakan ivde vere mathy
+		
+		
+		String src=driver.getPageSource();
+		if (src.contains("Gmail"))
+		{
+		 System.out.println("present");
+		}
+		 else
+		 {
+		 System.out.println("fail");
+		 }
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
